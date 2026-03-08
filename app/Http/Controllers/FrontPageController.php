@@ -10,8 +10,13 @@ use Illuminate\View\View;
 
 class FrontPageController extends Controller
 {
-    public function index(): View
+    public function index($slug=null)
     {
+        if ($redirect = $this->handleLegacyRedirect($slug)) {
+            return $redirect;
+        }
+
+
         // Menu categories
         $menuCategories = CategoryService::getMenus();
 
@@ -50,5 +55,17 @@ class FrontPageController extends Controller
     {
         $data['contact'] = Contact::find(1);
         return view('pages.contact', $data);
+    }
+
+    private function handleLegacyRedirect(string $slug=null)
+    {
+        if (!isset($slug)) return null;
+
+        $redirects = config('redirects', []);
+        if (isset($redirects[$slug])) {
+            return redirect()->to('/post/' . $redirects[$slug], 301);
+        }
+
+        return null;
     }
 }

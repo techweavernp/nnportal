@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
+
+Route::get('/{slug}', [FrontPageController::class, 'index']);
 Route::get('/', [FrontPageController::class, 'index']);
 Route::get('/index', [FrontPageController::class, 'index']);
 Route::get('/about', [FrontPageController::class, 'about']);
