@@ -26,6 +26,7 @@ return new class extends Migration
             $table->id();
             $table->string('featured_image')->nullable();
             $table->string('title');
+            $table->string('slug')->unique();
             $table->longText('content');
             $table->foreignId('author_id')->constrained('users')->onDelete('cascade');
 
