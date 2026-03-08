@@ -37,7 +37,7 @@
                         <div class="hero-meta">
                             <span class="hero-author">
                                 <img src="{{asset('assets/images/icon.png')}}" alt="Author">
-                                {{$featuredPost->author->name}}
+                                {{$featuredPost->author->nick_name}}
                             </span>
                             <span>
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"

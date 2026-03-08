@@ -18,7 +18,7 @@
             <div class="article-meta">
                     <span class="article-author">
                         <img src="{{asset('assets/images/icon.png')}}" alt="logo">
-                        {{$post->author->name}}
+                        {{$post->author->nick_name}}
                     </span>
                 <span class="article-date">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
