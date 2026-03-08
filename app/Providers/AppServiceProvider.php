@@ -10,6 +10,8 @@ use Filament\Forms\Components\ToggleButtons;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use App\Models\Post;
+use App\Observers\PostObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Model::automaticallyEagerLoadRelationships();
+
+        Post::observe(PostObserver::class);
 
         /* filament configuration */
         TextArea::configureUsing(fn(TextArea $textArea) =>
