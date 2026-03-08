@@ -112,11 +112,7 @@
                     @if($featuredPost)
                         <article class="main-featured-news">
                             <a href="{{ route('post.show', $featuredPost->slug) }}" class="main-featured-image">
-                                @if($featuredPost->featured_image)
-                                    <img src="{{ Storage::url($featuredPost->featured_image) }}" alt="{{ $featuredPost->title }}">
-                                @else
-                                    <img src="{{ asset('assets/images/placeholder-featured.jpg') }}" alt="{{ $featuredPost->title }}">
-                                @endif
+                                <img src="{{ $featuredPost->featured_image ? asset('storage/' . $featuredPost->featured_image) : asset('assets/images/icon.png') }}" alt="{{ $featuredPost->title }}">
                             </a>
                             <div class="main-featured-content">
                                 <a href="{{ route('post.show', $featuredPost->slug) }}">
@@ -131,7 +127,7 @@
                         @foreach($mainNewsLists as $post)
                         <article class="main-news-item">
                             <a href="{{ route('post.show', $post->slug) }}" class="main-news-thumb">
-                                <img src="{{ asset('storage/' . $post->featured_image) }}" alt="main news">
+                                <img src="{{ $post->featured_image ? asset('storage/' . $post->featured_image) : asset('assets/images/icon.png') }}" alt="main news">
                             </a>
                             <div class="main-news-item-content">
                                 <a href="{{ route('post.show', $post->slug) }}">
