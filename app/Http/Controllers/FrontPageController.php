@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ElectionResult;
 use App\Models\FrontPage\About;
 use App\Models\FrontPage\Contact;
-use App\Models\Post;
 use App\Services\CategoryService;
 use App\Services\PostService;
 use Illuminate\View\View;
@@ -33,9 +31,12 @@ class FrontPageController extends Controller
         //भर्खरे...
         $latestPosts     = $postQuery()->limit(8)->get(); // no category filter
 
+        // Highlights
+        $highlights      = $postQuery('highlights')->limit(4)->get();
+
         return view('pages.index', compact(
             'menuCategories', 'bannerPosts', 'featuredPost',
-            'mainNewsLists', 'latestPosts'
+            'mainNewsLists', 'latestPosts', 'highlights'
         ));
     }
 

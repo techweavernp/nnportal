@@ -195,33 +195,14 @@
             </div>
 
             <div class="gallery-grid">
-                <a href="news-detail.html" class="gallery-item reveal stagger-1">
-                    <img src="https://nepalnewsportal.com/wp-content/uploads/2026/02/bom-bispot.jpg" alt="Gallery 1">
+                @foreach($highlights as $post)
+                <a href="{{route('post.show', $post->slug)}}" class="gallery-item reveal stagger-1">
+                    <img src="{{ $post->featured_image ? asset('storage/' . $post->featured_image) : asset('assets/images/icon.png') }}" alt="Gallery 1">
                     <div class="gallery-overlay">
-                        <span class="gallery-title">कजाकिस्तानमा ग्यास विस्फोट, सात जनाको मृत्यु</span>
+                        <span class="gallery-title">{{$post->title}}</span>
                     </div>
                 </a>
-                <a href="news-detail.html" class="gallery-item reveal stagger-2">
-                    <img src="https://images.unsplash.com/photo-1520638023360-6def43369781?w=800&h=600&fit=crop"
-                         alt="Gallery 2">
-                    <div class="gallery-overlay">
-                        <span class="gallery-title">आज शुक्रबार बिहान ४.७ रेक्टर स्केलको भूकम्प गएको छ।</span>
-                    </div>
-                </a>
-                <a href="news-detail.html" class="gallery-item reveal stagger-3">
-                    <img src="https://nepalnewsportal.com/wp-content/uploads/2026/02/Beige-Bold-Cricket-Match-Banner-8-1536x768.jpg"
-                         alt="Gallery 3">
-                    <div class="gallery-overlay">
-                        <span class="gallery-title">होलीमा सार्वजनिक स्थानमा भेला र चुनावी प्रचारमा रोक</span>
-                    </div>
-                </a>
-                <a href="news-detail.html" class="gallery-item reveal stagger-4">
-                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop"
-                         alt="Gallery 4">
-                    <div class="gallery-overlay">
-                        <span class="gallery-title">रिडी लाइन इनर्जीको आईपीओ बाँडफाँट सम्पन्न</span>
-                    </div>
-                </a>
+                @endforeach
             </div>
         </div>
     </section>
