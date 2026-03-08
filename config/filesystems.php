@@ -33,9 +33,11 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'serve' => true,
+            'url' => env('ASSET_URL').'/storage',
             'throw' => false,
+            'serve' => true,
             'report' => false,
+            
         ],
 
         'public' => [
