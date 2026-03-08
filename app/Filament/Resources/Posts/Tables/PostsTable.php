@@ -23,7 +23,7 @@ class PostsTable
                 TextColumn::make('title')
                     ->wrap()
                     ->searchable(),
-                TextColumn::make('author.name')
+                TextColumn::make('author.nick_name')
                     ->sortable(),
                 TextColumn::make('status')
                     ->badge()

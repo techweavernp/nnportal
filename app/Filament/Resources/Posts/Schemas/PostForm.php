@@ -67,7 +67,7 @@ class PostForm
                                 ->default(fn () => auth()->id()),
                             TextEntry::make('author_name:')
                                 ->inlineLabel()
-                                ->default(fn (?Post $record): string => $record?->author?->name ?? auth()->user()->name),
+                                ->default(fn (?Post $record): string => $record?->author?->nick_name ?? auth()->user()->nick_name),
                             FileUpload::make('featured_image')
                                 ->image()
                                 ->directory('posts')

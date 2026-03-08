@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\ChangePasswords\ChangePasswordResource;
 use App\Filament\Resources\Users\UserResource;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use BezhanSalleh\FilamentShield\Resources\Roles\RoleResource;
@@ -54,7 +55,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                AccountWidget::class,
+                //AccountWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -74,6 +75,12 @@ class AdminPanelProvider extends PanelProvider
             ->renderHook(PanelsRenderHook::GLOBAL_SEARCH_AFTER, function () {
                 return view('filament.widgets.add-setting-button')->render();
             })
+            ->userMenuItems([
+                Action::make('chngpwd')
+                    ->label('Change Password')
+                    ->icon('heroicon-o-key')
+                    ->url(fn(): string => ChangePasswordResource::getUrl('edit', ['record' => auth()->user()->id])),
+            ])
             ->plugins([
                 FilamentShieldPlugin::make()
                     ->navigationSort(102)
