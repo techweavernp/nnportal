@@ -26,8 +26,6 @@ Route::get('/post/{slug}', [CategoryPostController::class, 'show'])->name('post.
 
 
 
-
-
 Route::get('/record', function () {
     return view('record-file');
 });

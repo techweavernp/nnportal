@@ -2,12 +2,11 @@
 
 namespace App\Filament\Resources\Posts\Tables;
 
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
 use Filament\Actions\EditAction;
-use Filament\Actions\ForceDeleteBulkAction;
-use Filament\Actions\RestoreBulkAction;
 use Filament\Actions\ViewAction;
+use Filament\Notifications\Notification;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
@@ -19,6 +18,7 @@ class PostsTable
     {
         return $table
             ->columns([
+                TextColumn::make('id'),
                 ImageColumn::make('featured_image'),
                 TextColumn::make('title')
                     ->wrap()
@@ -55,15 +55,34 @@ class PostsTable
                 TrashedFilter::make(),
             ])
             ->recordActions([
-                ViewAction::make(),
-                EditAction::make(),
+                ActionGroup::make([
+                    ViewAction::make(),
+                    EditAction::make(),
+                    Action::make('archive')
+                        ->icon('heroicon-o-archive-box')
+                        ->color('warning')
+                        ->modalHeading('Archive Post?')
+                        ->modalDescription('Are you sure you want to archive this post? This will change its status to archived.')
+                        ->modalSubmitActionLabel('Yes, archive')
+                        ->requiresConfirmation()
+                        ->action(function ($record): void {
+                            $record->update([
+                                'status' => 3
+                            ]);
+
+                            Notification::make()
+                                ->title('Post archived')
+                                ->success()
+                                ->send();
+                        }),
+                ])
             ])
-            ->toolbarActions([
+            /*->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                     ForceDeleteBulkAction::make(),
                     RestoreBulkAction::make(),
                 ]),
-            ]);
+            ])*/;
     }
 }

@@ -16,7 +16,6 @@ class FrontPageController extends Controller
             return $redirect;
         }
 
-
         // Menu categories
         $menuCategories = CategoryService::getMenus();
 
