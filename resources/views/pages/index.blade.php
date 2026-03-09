@@ -11,6 +11,7 @@
             </a>
         </div>
     </div>--}}
+    <livewire:advertisements title="Banner Header" position="main"/>
 
     {{-- Election Result --}}
     {{-- <x-election-result :electionResults="$electionResults" /> --}}
@@ -56,14 +57,7 @@
     </section>
 
     <!-- Inline Ad -->
-    {{--<div class="container">
-        <div class="ad-space ad-top">
-            <!-- Replace the span with an anchor and image tag -->
-            <a href="https://your-ad-link.com" target="_blank">
-                <img src="{{asset('assets/images/ads/ad-banner.jpg')}}" alt="Advertisement">
-            </a>
-        </div>
-    </div>--}}
+    <livewire:advertisements title="Banner Inline" position="main"/>
 
     <!-- Main 3-Column Section: भर्खरै... | मुख्य समाचार | लोकप्रिय... -->
     <section class="three-column-section">
@@ -171,20 +165,14 @@
                         <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/01/online-300x200-1.gif"
                              alt="Advertisement">
                     </div>--}}
+                    <livewire:advertisements title="Sidebar AL" position="sidebar" />
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Bottom Banner Ad -->
-    {{--<div class="container">
-        <div class="ad-space ad-top">
-            <!-- Replace the span with an anchor and image tag -->
-            <a href="https://your-ad-link.com" target="_blank">
-                <img src="{{asset('assets/images/ads/ad-banner.jpg')}}" alt="Advertisement">
-            </a>
-        </div>
-    </div>--}}
+    <livewire:advertisements title="Banner Footer"/>
 
     <!-- Photo Gallery Section -->
     <section class="gallery-section">

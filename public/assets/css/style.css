@@ -393,7 +393,8 @@ h6 {
 }
 
 article.hero-card.reveal.mb-3.active {
-    background: var(--border-gray);
+    padding-top: 20px;
+    background: var(--bg-gray);
 }
 
 .hero-centered .hero-card+.hero-card {
@@ -861,18 +862,19 @@ article.hero-card.reveal.mb-3.active {
 /* ===== Category Page ===== */
 .category-header {
     padding: 1rem 0;
-    background: var(--bg-gray);
+    background: var(--border-gray);
+    margin-bottom: 10px;
 }
 
 .category-title {
-    font-size: 2rem;
-    color: var(--primary-red);
+    font-size: 3rem;
+    color: var(--light-black);
 }
 
-.category-title-line {
+/*.category-title-line {
     height: 3px;
     background: var(--primary-red);
-}
+}*/
 
 .category-grid {
     display: grid;
@@ -1074,7 +1076,7 @@ article.hero-card.reveal.mb-3.active {
     .nav-home-item {
         flex: 0 0 70px;
         overflow: visible;
-        margin-top: -30px;
+        margin-top: -50px;
     }
 
     .nav-home-btn {
@@ -1773,7 +1775,7 @@ article.hero-card.reveal.mb-3.active {
     font-family: 'Anek Devanagari', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--black);
+    color: var(--light-black);
     line-height: 1.2;
     margin-bottom: 1rem;
 }

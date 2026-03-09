@@ -89,7 +89,8 @@
         .container {
             width: 100%;
             max-width: 600px;
-            padding: clamp(2rem, 8vw, 4rem);
+            padding-top: 10px;
+            padding-bottom: 10px;
             background: var(--glass);
             backdrop-filter: blur(15px);
             border-radius: 40px;
