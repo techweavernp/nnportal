@@ -42,21 +42,20 @@
             <div class="footer-links-col">
                 <h4 class="footer-title">द्रुत लिङ्कहरू</h4>
                 <div class="footer-links">
-                    <a href="index.html" class="footer-link">गृहपृष्ठ</a>
-                    <a href="category.html" class="footer-link">मुख्य समाचार</a>
-                    <a href="category.html" class="footer-link">अन्तर्राष्ट्रिय</a>
-                    <a href="category.html" class="footer-link">स्थानीय</a>
-                    <a href="category.html" class="footer-link">अर्थतन्त्र</a>
+                    <a href="/" class="footer-link">गृहपृष्ठ</a>
+                    <a href="/category/main-news" class="footer-link">मुख्य समाचार</a>
+                    <a href="/category/inter" class="footer-link">अन्तर्राष्ट्रिय</a>
+                    <a href="/category/local" class="footer-link">स्थानीय</a>
+                    <a href="/category/economics" class="footer-link">अर्थतन्त्र</a>
                 </div>
             </div>
 
             <div class="footer-links-col">
                 <h4 class="footer-title">थप</h4>
                 <div class="footer-links">
-                    <a href="category.html" class="footer-link">मनोरन्जन</a>
-                    <a href="category.html" class="footer-link">कला / संस्कृति</a>
-                    <a href="category.html" class="footer-link">स्वास्थ्य</a>
-                    <a href="category.html" class="footer-link">फोटो ग्यालरी</a>
+                    <a href="/category/entertainment" class="footer-link">मनोरन्जन</a>
+                    <a href="/category/art-culture" class="footer-link">कला / संस्कृति</a>
+                    <a href="/category/health" class="footer-link">स्वास्थ्य</a>
                 </div>
             </div>
 
@@ -78,9 +77,156 @@
     </div>
 </footer>
 
+<!-- Updates Drawer (Slide Up Screen) -->
+{{--<div class="updates-overlay" id="updatesOverlay"></div>
+<div class="updates-drawer" id="updatesDrawer">
+    <div class="drawer-header">
+        <div class="drawer-handle"></div>
+        <div class="drawer-title-row">
+            <h3>ताजा अपडेटहरू</h3>
+            <button class="drawer-close" id="closeDrawer">&times;</button>
+        </div>
+    </div>
+    <div class="drawer-body">
+        <ul class="updates-list">
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    कजाकिस्तानमा ग्यास विस्फोट, सात जनाको मृत्यु
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    होलीमा सार्वजनिक स्थानमा भेला र चुनावी प्रचारमा रोक
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    आज शुक्रबार बिहान ४.७ रेक्टर स्केलको भूकम्प गएको छ।
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    रिडी लाइन इनर्जीको आईपीओ बाँडफाँट सम्पन्न
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    दक्षिण सुडान संकटमा: कोष अभावले १९ लाख जोखिममा
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    पुरानो विरासतको नयाँ प्रस्तुति: 'योबन या गाच्वो'
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    विपद् तयारी सुदृढ बनाउन महानगरको उपकरण सहयोग
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>--}}
+
+<!-- This Week Updates Drawer -->
+{{--<div class="updates-overlay" id="thisWeekOverlay"></div>
+<div class="updates-drawer" id="thisWeekDrawer">
+    <div class="drawer-header">
+        <div class="drawer-handle"></div>
+        <div class="drawer-title-row">
+            <h3>यो सातामा</h3>
+            <button class="drawer-close" id="closeThisWeek">&times;</button>
+        </div>
+    </div>
+    <div class="drawer-body">
+        <ul class="updates-list">
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    नेपाल-भारत पारवहन सम्झौता नवीकरण: व्यापारमा सहजता हुने अपेक्षा
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    सेयर बजारमा यो साता सुधारको संकेत, लगानीकर्ता उत्साहित
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    प्रधानमन्त्रीको आसन्न विदेश भ्रमणको तयारी तीव्र: परराष्ट्र मन्त्रालय
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    स्थानीय तहको निर्वाचन २०८२: आयोगद्वारा नयाँ निर्देशिका जारी
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    जलवायु परिवर्तन सम्बन्धी राष्ट्रिय सम्मेलन काठमाडौँमा सम्पन्न
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    क्रिकेट: नेपाल र नामिबिया बीचको मैत्रीपूर्ण खेल भोलि हुँदै
+                </a>
+            </li>
+            <li>
+                <a href="news-detail.html">
+                    <span class="update-dot"></span>
+                    पर्यटन क्षेत्रमा उल्लेख्य वृद्धि: यो महिना ५० हजार विदेशी पर्यटक भित्रिए
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>--}}
+
+<!-- Search Modal -->
+{{--<div class="search-modal" id="searchModal">
+    <div class="search-modal-content">
+        <div class="search-header">
+            <h3>खोज्नुहोस्</h3>
+            <button class="search-close" id="closeSearch">&times;</button>
+        </div>
+        <div class="search-body">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="यहाँ टाइप गर्नुहोस्..." class="search-input" id="searchInput">
+                <button class="search-submit">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+            <div class="trending-searches">
+                <h4>लोकप्रिय खोजहरू</h4>
+                <div class="trending-tags">
+                    <a href="category.html">#राजनीति</a>
+                    <a href="category.html">#निर्वाचन२०८२</a>
+                    <a href="category.html">#अर्थतन्त्र</a>
+                    <a href="category.html">#खेलकुद</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>--}}
+
 <!-- Mobile Bottom Navigation -->
 <nav class="mobile-bottom-nav">
-    <a href="#" class="nav-item">
+    <a href="#" class="nav-item" id="updatesTrigger">
         <div class="nav-icon">
             <svg viewBox="0 0 24 24">
                 <path
@@ -89,7 +235,7 @@
         </div>
         <span>नयाँ अपडेट</span>
     </a>
-    <a href="#" class="nav-item">
+    <a href="#" class="nav-item" id="updatesThisWeek">
         <div class="nav-icon">
             <svg viewBox="0 0 24 24">
                 <path
@@ -98,7 +244,7 @@
         </div>
         <span>यो सातामा</span>
     </a>
-    <a href="index.html" class="nav-item nav-home-item">
+    <a href="/" class="nav-item nav-home-item">
         <div class="nav-home-btn">
             <div class="nav-icon">
                 <svg viewBox="0 0 24 24">
@@ -107,7 +253,7 @@
             </div>
         </div>
     </a>
-    <a href="#" class="nav-item">
+    <a href="#" class="nav-item" id="searchTrigger">
         <div class="nav-icon">
             <svg viewBox="0 0 24 24">
                 <path
@@ -116,13 +262,13 @@
         </div>
         <span>संक्षिप्त खोज</span>
     </a>
-    <a href="category.html" class="nav-item">
+    <a href="/category/local" class="nav-item">
         <div class="nav-icon">
             <svg viewBox="0 0 24 24">
                 <path
                     d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
             </svg>
         </div>
-        <span>प्रदेश / स्थानीय</span>
+        <span>स्थानीय</span>
     </a>
 </nav>

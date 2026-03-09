@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initScrollReveal();
     initSmoothScroll();
+    initSearchModal();
+
+    // Initialize Drawers
+    setupDrawer('updatesTrigger', 'updatesDrawer', 'updatesOverlay', 'closeDrawer');
+    setupDrawer('updatesThisWeek', 'thisWeekDrawer', 'thisWeekOverlay', 'closeThisWeek');
 });
 
 /**
@@ -148,19 +153,10 @@ function shareOnWhatsApp(url, title) {
     window.open(shareUrl, '_blank');
 }
 
-function copyLink(url) {
-    navigator.clipboard.writeText(url).then(function() {
-        alert('Link copied to clipboard!');
-    }).catch(function(err) {
-        console.error('Could not copy text: ', err);
-    });
-}
-
 // Attach share functions to window
 window.shareOnFacebook = shareOnFacebook;
 window.shareOnTwitter = shareOnTwitter;
 window.shareOnWhatsApp = shareOnWhatsApp;
-window.copyLink = copyLink;
 
 /**
  * Lazy loading images
@@ -224,3 +220,92 @@ function initFloatingAd() {
 
 // Initialize floating ad
 document.addEventListener('DOMContentLoaded', initFloatingAd);
+
+/**
+ * Search Modal functionality
+ */
+function initSearchModal() {
+    const searchTrigger = document.getElementById('searchTrigger');
+    const searchModal = document.getElementById('searchModal');
+    const closeSearch = document.getElementById('closeSearch');
+    const searchInput = document.getElementById('searchInput');
+
+    if (!searchTrigger || !searchModal || !closeSearch) return;
+
+    // Open search
+    searchTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        searchModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+            if (searchInput) searchInput.focus();
+        }, 100);
+    });
+
+    // Close function
+    function doCloseSearch() {
+        searchModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close on click
+    closeSearch.addEventListener('click', doCloseSearch);
+
+    // Close on clicking outside content
+    searchModal.addEventListener('click', function (e) {
+        if (e.target === searchModal) {
+            doCloseSearch();
+        }
+    });
+
+    // Close on escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+            doCloseSearch();
+        }
+    });
+}
+
+/**
+ * Generic Drawer toggle setup
+ */
+function setupDrawer(triggerId, drawerId, overlayId, closeBtnId) {
+    const trigger = document.getElementById(triggerId);
+    const drawer = document.getElementById(drawerId);
+    const overlay = document.getElementById(overlayId);
+    const closeBtn = document.getElementById(closeBtnId);
+
+    if (!trigger || !drawer || !overlay) return;
+
+    // Open drawer
+    trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Close function
+    function closeDrawer() {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close events
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+
+    // Close on escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && drawer.classList.contains('active')) {
+            closeDrawer();
+        }
+    });
+
+    // Close on link click
+    const links = drawer.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+}
