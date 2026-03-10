@@ -9,7 +9,7 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
     @if(isset($post))
-    <link rel="canonical" href="https://nepalnewsportal.com/post/{{trim($post->slug}})" />
+    <link rel="canonical" href="https://nepalnewsportal.com/post/{{trim($post->slug)}}" />
 
     <!-- Facebook OG Tags -->
         <meta property="og:title" content="{{$post->title}}" />
