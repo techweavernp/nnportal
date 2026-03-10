@@ -9,15 +9,17 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
     @if(isset($post))
-    <link rel="canonical" href="https://nepalnewsportal.com/post/{{$post->slug}}" />
+    <link rel="canonical" href="https://nepalnewsportal.com/post/{{trim($post->slug}})" />
 
     <!-- Facebook OG Tags -->
-    <meta property="og:title" content="{{$post->title}}" />
-    <meta property="og:url" content="https://www.nepalnewsportal.com/post/{{$post->slug}}" />
-    <meta property="og:description" content="{{$post->excerpt}}" />
-    <meta property="og:image" content="{{ asset('storage/' . $post->featured_image) }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="नेपाल न्युज पोर्टल" />
+        <meta property="og:title" content="{{$post->title}}" />
+        <meta property="og:url" content="https://www.nepalnewsportal.com/post/{{trim($post->slug)}}" />
+        <meta property="og:description" content="{{$post->excerpt}}" />
+        <meta property="og:image" content="{{ asset('storage/' . $post->featured_image) }}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="नेपाल न्युज पोर्टल" />
+        <meta property="og:image:width" content="900" />
+        <meta property="og:image:height" content="550" />
     <!-- Facebook OG Tags -->
     @endif
 
