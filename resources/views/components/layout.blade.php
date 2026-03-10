@@ -14,12 +14,12 @@
     <!-- Facebook OG Tags -->
         <meta property="og:title" content="{{$post->title}}" />
         <meta property="og:url" content="https://www.nepalnewsportal.com/post/{{trim($post->slug)}}" />
-        <meta property="og:description" content="{{$post->excerpt}}" />
+        <meta property="og:description" content="{!! $post->excerpt !!}" />
         <meta property="og:image" content="{{ asset('storage/' . $post->featured_image) }}" />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="नेपाल न्युज पोर्टल" />
-        <meta property="og:image:width" content="900" />
-        <meta property="og:image:height" content="550" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
     <!-- Facebook OG Tags -->
     @endif
 
