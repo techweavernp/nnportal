@@ -50,12 +50,12 @@ class PostForm
                                 ->required()
                                 ->extraInputAttributes(['style' => 'min-height: 20rem; max-height: 50vh; overflow-y: auto;'])
                                 ->columnSpanFull(),
-                            TextInput::make('meta_title'),
+                            /*TextInput::make('meta_title'),
                             Textarea::make('meta_description')
                                 ->columnSpanFull(),
                             TextInput::make('meta_keywords'),
                             TextInput::make('canonical_url')
-                                ->url(),
+                                ->url(),*/
                         ])
                     ])->columnSpan(['lg' => 2]),
 
