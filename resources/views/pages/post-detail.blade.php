@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :post="$post">
     <x-header-menus :menuCategories="$menuCategories" />
 <!-- Top Banner Ad -->
 {{--<div class="container">

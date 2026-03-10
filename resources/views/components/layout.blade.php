@@ -8,18 +8,18 @@
     <meta name="description" content="Nepal News Portal, Nepal's fastest-growing news platform. Real stories, real impact.">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-    <link rel="canonical" href="https://nepalnewsportal.com/" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="नेपाल न्युज पोर्टल" />
-    <meta property="og:description" content="Nepal&#039;s fastest-growing news platform. Real stories, real impact." />
-    <meta property="og:url" content="https://nepalnewsportal.com/" />
+    @if(isset($post))
+    <link rel="canonical" href="https://nepalnewsportal.com/post/{{$post->slug}}" />
+
+    <!-- Facebook OG Tags -->
+    <meta property="og:title" content="{{$post->title}}" />
+    <meta property="og:url" content="https://www.nepalnewsportal.com/post/{{$post->slug}}" />
+    <meta property="og:description" content="{{$post->excerpt}}" />
+    <meta property="og:image" content="{{ asset('storage/' . $post->featured_image) }}" />
+    <meta property="og:type" content="article" />
     <meta property="og:site_name" content="नेपाल न्युज पोर्टल" />
-    <meta property="og:image" content="https://nepalnewsportal.com/public/assets/images/icon.png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="265" />
-    <meta property="og:image:type" content="image/png" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Facebook OG Tags -->
+    @endif
 
     <!-- Google Fonts - Anek Devanagari -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
