@@ -15,7 +15,7 @@
     <meta property="og:description" content="Nepal&#039;s fastest-growing news platform. Real stories, real impact." />
     <meta property="og:url" content="https://nepalnewsportal.com/" />
     <meta property="og:site_name" content="नेपाल न्युज पोर्टल" />
-    <meta property="og:image" content="https://nepalnewsportal.com/wp-content/uploads/2026/02/Newsportal-Banner-500x265.png" />
+    <meta property="og:image" content="https://nepalnewsportal.com/public/assets/images/icon.png" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="265" />
     <meta property="og:image:type" content="image/png" />

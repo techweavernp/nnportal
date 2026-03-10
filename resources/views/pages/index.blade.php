@@ -11,7 +11,7 @@
             </a>
         </div>
     </div>--}}
-    <livewire:advertisements title="Banner Header" position="main"/>
+    {{--<livewire:advertisements title="Banner Header" position="main"/>--}}
 
     {{-- Election Result --}}
     {{-- <x-election-result :electionResults="$electionResults" /> --}}
@@ -57,7 +57,7 @@
     </section>
 
     <!-- Inline Ad -->
-    <livewire:advertisements title="Banner Inline" position="main"/>
+    {{--<livewire:advertisements title="Banner Inline" position="main"/>--}}
 
     <!-- Main 3-Column Section: भर्खरै... | मुख्य समाचार | लोकप्रिय... -->
     <section class="three-column-section">
@@ -165,7 +165,7 @@
                         <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/01/online-300x200-1.gif"
                              alt="Advertisement">
                     </div>--}}
-                    <livewire:advertisements title="Sidebar AL" position="sidebar" />
+                    {{--<livewire:advertisements title="Sidebar AL" position="sidebar" />--}}
                 </div>
             </div>
         </div>
