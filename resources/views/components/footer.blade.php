@@ -3,7 +3,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-about">
-                <a href="/index" class="footer-logo">
+                <a href="/" class="footer-logo">
                     <img src="{{asset('assets/images/logo-footer.png')}}" alt="Logo">
                 </a>
                 <p class="footer-desc">
@@ -39,6 +39,17 @@
                 </div>
             </div>
 
+            <div class="footer-contact-col">
+                <h4 class="footer-title">सम्पर्क</h4>
+                <div class="footer-contact">
+                    <p><strong>अध्यक्ष तथा प्रबन्ध निर्देशक</strong><br>सुरेश श्रेष्ठ</p>
+                    <p><strong>प्रधान सम्पादक</strong><br>महेश्वर महर्जन</p>
+                    <p><strong>प्रकाशक</strong><br>बिगेन तुलाधर</p>
+                    <p><strong>सुचना विभाग दर्ता नं.</strong><br>अपडेट हुँदै छ</p>
+
+                </div>
+            </div>
+
             <div class="footer-links-col">
                 <h4 class="footer-title">द्रुत लिङ्कहरू</h4>
                 <div class="footer-links">
@@ -58,21 +69,10 @@
                     <a href="/category/health" class="footer-link">स्वास्थ्य</a>
                 </div>
             </div>
-
-            <div class="footer-contact-col">
-                <h4 class="footer-title">सम्पर्क</h4>
-                <div class="footer-contact">
-                    <p><strong>अध्यक्ष तथा प्रबन्ध निर्देशक</strong><br>सुरेश श्रेष्ठ</p>
-                    <p><strong>प्रधान सम्पादक</strong><br>महेश्वर महर्जन</p>
-                    <p><strong>प्रकाशक</strong><br>बिगेन तुलाधर</p>
-                    <p><strong>सुचना विभाग दर्ता नं.</strong><br>अपडेट हुँदै छ</p>
-
-                </div>
-            </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 NepalNewsPortal.com. सर्वाधिकार सुरक्षित।</p>
+            <p>&copy; {{date('y')}} NepalNewsPortal.com. सर्वाधिकार सुरक्षित।</p>
         </div>
     </div>
 </footer>

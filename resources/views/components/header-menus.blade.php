@@ -1,12 +1,12 @@
 <!-- Header -->
 <header class="header">
     <div class="container header-inner">
-        <a href="/index" class="logo">
+        <a href="/" class="logo">
             <img src="{{asset('assets/images/logo.png')}}" alt="Logo">
         </a>
 
         <nav class="nav">
-            <a href="/index" class="nav-link {!! request()->is('index')||request()->is('/')?'active':'' !!}">गृहपृष्ठ</a>
+            <a href="/" class="nav-link {!! request()->is('index')||request()->is('/')?'active':'' !!}">गृहपृष्ठ</a>
             @foreach($menuCategories as $category)
                 <a href="{{"/category/".$category->slug}}" class="nav-link {!! request()->is("category/$category->slug")?'active':'' !!}">{{$category->name}}</a>
             @endforeach
