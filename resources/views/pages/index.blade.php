@@ -75,7 +75,7 @@
                         @foreach($latestPosts as $post)
                         <article class="recent-news-item">
                             <a href="{{ route('post.show', $post->slug) }}" class="recent-news-thumb">
-                                <img src="{{ asset('storage/' . $post->featured_image) }}"
+                                <img src="{{ $post->featured_image ? asset('storage/' . $post->featured_image) : asset('assets/images/icon.png') }}"
                                      alt="recent news">
                             </a>
                             <div class="recent-news-content">

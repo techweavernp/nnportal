@@ -27,8 +27,10 @@ class CategoriesTable
                     ->sortable(),
                 IconColumn::make('is_active')
                     ->boolean(),
-                IconColumn::make('show_in_menu')
-                    ->boolean(),
+                TextColumn::make('posts_count')
+                    ->counts('posts')
+                    ->badge()
+                    ->color('info')
             ])
             ->defaultSort('display_order', 'asc')
             ->reorderable('display_order')
