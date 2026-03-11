@@ -200,19 +200,19 @@
         <div class="ad-close-btn" id="closeFloatingAd">&times;</div>
         <div class="cube-container">
             <div class="cube-face face-front">
-                <img src="https://nepalnewsportal.com/wp-content/uploads/2026/02/NepalNewsPortal-GIF.gif" alt="Ad 1"
+                <img src="https://nepalnewsportal.com/storage/ads/NepalNewsPortal-GIF.gif" alt="Ad 1"
                      style="width: 100px; height: 100px; object-fit: cover;">
             </div>
             <div class="cube-face face-back">
-                <img src="https://nepalnewsportal.com/wp-content/uploads/2026/02/NewsNepa.gif" alt="Ad 2"
+                <img src="https://nepalnewsportal.com/storage/ads/NewsNepa.gif" alt="Ad 2"
                      style="width: 100px; height: 100px; object-fit: cover;">
             </div>
             <div class="cube-face face-left">
-                <img src="https://nepalnewsportal.com/wp-content/uploads/2026/02/aD-sPACE.gif" alt="Ad 3"
+                <img src="https://nepalnewsportal.com/storage/ads/aD-sPACE.gif" alt="Ad 3"
                      style="width: 100px; height: 100px; object-fit: cover;">
             </div>
             <div class="cube-face face-right">
-                <img src="https://nepalnewsportal.com/wp-content/uploads/2026/02/techweaver.gif" alt="Ad 4"
+                <img src="https://nepalnewsportal.com/storage/ads/techweaver.gif" alt="Ad 4"
                      style="width: 100px; height: 100px; object-fit: cover;">
             </div>
         </div>
