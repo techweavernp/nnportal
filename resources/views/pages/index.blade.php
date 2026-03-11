@@ -165,7 +165,7 @@
                         <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/01/online-300x200-1.gif"
                              alt="Advertisement">
                     </div>--}}
-                    {{--<livewire:advertisements title="Sidebar AL" position="sidebar" />--}}
+                    <livewire:advertisements title="Sidebar AL" position="sidebar" />
                 </div>
             </div>
         </div>
