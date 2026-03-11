@@ -65,7 +65,8 @@ class AdCampaignForm
                                 ->default(now()),
                             ToggleButtons::make('payment_mode')
                                 ->default(PaymentModeEnum::CASH)
-                                ->options(PaymentModeEnum::class),
+                                ->options(PaymentModeEnum::class)
+                                ->required(false),
                             Toggle::make('is_paid'),
                         ])
                     ])->columnSpan(['lg'=>1]),
