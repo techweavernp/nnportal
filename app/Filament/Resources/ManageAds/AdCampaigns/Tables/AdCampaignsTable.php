@@ -34,22 +34,19 @@ class AdCampaignsTable
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('link_url')
-                    ->searchable(),
+                    ->toggleable(isToggledHiddenByDefault: true),
                 ToggleColumn::make('is_active'),
                 TextColumn::make('payment_amount')
                     ->numeric()
-                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 IconColumn::make('is_paid')
                     ->boolean()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('payment_date')
                     ->dateTime()
-                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('payment_mode')
                     ->badge()
-                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
