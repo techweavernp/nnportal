@@ -46,7 +46,7 @@
             <!-- Featured Image -->
             @if($post->featured_image)
             <div class="article-image reveal">
-                <img src="{{ asset('storage/' . $post->featured_image) }}" alt="nepal news portal">
+                <img src="{{  asset('storage/' . $post->featured_image) }}" alt="nepal news portal">
             </div>
             @endif
 
@@ -133,7 +133,7 @@
             @foreach($trendingPosts as $post)
             <a href="{{route('post.show', $post->slug)}}" class="trending-item">
                 <div class="trending-thumb-container">
-                    <img src="{{ asset('storage/' . $post->featured_image) }}" alt="nepal news portal">
+                    <img src="{{ $post->featured_image ? asset('storage/' . $post->featured_image) : asset('assets/images/icon.png') }}" alt="nepal news portal">
                     <span class="trending-number">{{ \App\Helpers\NepaliDateConvertor::toNepaliDigits($loop->iteration) }}</span>
                 </div>
                 <span class="trending-title">{{$post->title}}</span>

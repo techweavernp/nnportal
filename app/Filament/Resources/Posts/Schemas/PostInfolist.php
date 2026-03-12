@@ -17,6 +17,9 @@ class PostInfolist
                 Section::make()
                 ->columnSpanFull()
                 ->schema([
+                    TextEntry::make('canonical_url')
+                        ->copyable()
+                        ->placeholder(fn ($record): string => 'https://nepalnewsportal.com/post/'.$record->slug),
                     ImageEntry::make('featured_image')
                         ->placeholder('-'),
                     TextEntry::make('title'),
@@ -40,8 +43,6 @@ class PostInfolist
                         ->placeholder('-')
                         ->columnSpanFull(),
                     TextEntry::make('meta_keywords')
-                        ->placeholder('-'),
-                    TextEntry::make('canonical_url')
                         ->placeholder('-'),
                     TextEntry::make('created_at')
                         ->dateTime()
