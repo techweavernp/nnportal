@@ -20,7 +20,7 @@ class CategoryPostController extends Controller
         $mainNews        = $postQuery($slug)->limit(10)->get();
         $featuredPost    = $mainNews->first();
         $newsLists       = $mainNews->skip(1)->values();
-        $categoryName    = Category::select('id', 'name')->whereSlug($slug)->first()->name;
+        $categoryName    = Category::select('id', 'name')->whereSlug($slug)->firstOrFail()->name;
 
         return view('pages.category', compact(
             'menuCategories', 'featuredPost', 'newsLists', 'categoryName'

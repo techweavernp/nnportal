@@ -13,6 +13,8 @@
     </div>--}}
     {{--<livewire:advertisements title="Banner Header" position="main"/>--}}
 
+    <x-date-iqair-rate />
+
     {{-- Election Result --}}
     {{-- <x-election-result :electionResults="$electionResults" /> --}}
 
