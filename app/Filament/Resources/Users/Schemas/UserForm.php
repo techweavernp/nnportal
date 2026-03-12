@@ -7,6 +7,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Hash;
 
 class UserForm
 {
@@ -28,8 +30,13 @@ class UserForm
                     TextInput::make('password')
                         ->password()
                         ->revealable()
-                        ->required()
-                        ->disabledOn('edit'),
+                        ->dehydrated(fn($state): bool => filled($state))
+                        ->dehydrateStateUsing(fn($state): string => Hash::make($state))
+                        ->required(fn(string $operation): bool => $operation === 'create'),
+                    Select::make('roles')
+                        ->relationship('roles', 'name',
+                            fn(Builder $query) => $query->where('name', '!=', 'super_admin'))
+                        ->preload(),
                 ])->columns(2)
             ]);
     }
