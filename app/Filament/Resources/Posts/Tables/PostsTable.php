@@ -23,8 +23,9 @@ class PostsTable
                 TextColumn::make('title')
                     ->wrap()
                     ->searchable(),
-                TextColumn::make('author.nick_name')
-                    ->sortable(),
+                TextColumn::make('author.name')
+                    ->description(fn ($record): string => $record->author?->nick_name ?? '')
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('status')
                     ->badge()
                     ->sortable(),
