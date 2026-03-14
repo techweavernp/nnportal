@@ -28,5 +28,6 @@
         @foreach($menuCategories as $category)
             <a href="{{"/category/".$category->slug}}" class="mobile-nav-link">{{$category->name}}</a>
         @endforeach
+            <a href="{{"/category/technology"}}" class="mobile-nav-link">टेक्नोलोजी</a>
     </nav>
 </div>
