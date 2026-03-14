@@ -11,7 +11,7 @@
             </a>
         </div>
     </div>--}}
-    {{--<livewire:advertisements title="Banner Header" position="main"/>--}}
+    <livewire:advertisements title="Banner Header" position="main"/>
 
     {{--<x-date-iqair-rate />--}}
 
@@ -160,10 +160,6 @@
 
                     {{-- Sidebar Ad --}}
                     {{--<div class="ad-space ad-sidebar">
-                        <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/01/online-300x200-1.gif"
-                             alt="Advertisement">
-                    </div>
-                    <div class="ad-space ad-sidebar">
                         <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/01/online-300x200-1.gif"
                              alt="Advertisement">
                     </div>--}}

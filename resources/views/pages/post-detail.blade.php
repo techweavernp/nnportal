@@ -146,13 +146,13 @@
     </section>
 </div>
 
-<!-- Bottom Banner Ad -->
-{{--<div class="container">
-    <div class="ad-space ad-bottom">
-        <a href="https://your-ad-link.com" target="_blank">
-            <img src="{{asset('assets/images/ads/ad-banner.jpg')}}" alt="Advertisement 1200x90">
-        </a>
-    </div>
-</div>--}}
+    {{-- Bottom Banner Ad --}}
+    {{--<div class="container">
+        <div class="ad-space ad-bottom">
+            <a href="https://your-ad-link.com" target="_blank">
+                <img src="{{asset('assets/images/ads/ad-banner.jpg')}}" alt="Advertisement 1200x90">
+            </a>
+        </div>
+    </div>--}}
 
 </x-layout>
