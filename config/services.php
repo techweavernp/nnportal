@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'waqi' => [
+        'token' => env('WAQI_TOKEN', '2015645d-1881-4bde-b985-0cb65fe1513f'),
+    ],
+
 ];

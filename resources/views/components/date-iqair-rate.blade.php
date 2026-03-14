@@ -6,8 +6,8 @@ $prices = $scraper->fetchPrices();
 $scraperDate = new \App\Services\DateScraperService();
 $calendar = $scraperDate->getTodayData();
 
-$scraperIqair = new \App\Services\IqairScraperService();
-$iqair = $scraperIqair->fetchData();
+$aqiService = new \App\Services\IqairScraperService();
+$iqair = $aqiService->fetchData();
 
 function getAqiBgClass(int $aqi): string
 {
@@ -130,7 +130,7 @@ function getAqiColor(int $aqi): string
             </div>--}}
             <div class="utility-card iqair-wrapper">
                 <div class="aqi-card-custom">
-                    <div class="aqi-main-info {{ getAqiBgClass($iqair['aqi']) }}">
+                    <div class="aqi-main-info {{ \App\Services\IqairScraperService::getAqiBgClass($iqair['aqi']) }}">
                         <div class="aqi-header">
                             <div class="aqi-score-box">
                                 <p class="aqi-value">
@@ -143,7 +143,7 @@ function getAqiColor(int $aqi): string
                                 <div class="status-desc">{{ $iqair['location'] }}</div>
                             </div>
                             <div class="aqi-face">
-                                <img src="https://www.iqair.com/assets/svg/aqi/ic_face_48_{{ getAqiColor($iqair['aqi']) }}.svg" alt="Face">
+                                <img src="https://www.iqair.com/assets/svg/aqi/ic_face_48_{{ \App\Services\IqairScraperService::getAqiColor($iqair['aqi']) }}.svg" alt="Face">
                             </div>
                         </div>
                         <div class="aqi-separator"></div>
@@ -180,7 +180,7 @@ function getAqiColor(int $aqi): string
             </div>
 
             <!-- Gold & Silver Card -->
-            {{--<div class="utility-card rates-card">
+            <div class="utility-card rates-card">
                 <div class="rates-as-of" id="rates-as-of">
                     मिति: {{\App\Helpers\NepaliDateConvertor::toNepaliDigits($prices['date'])}}</div>
                 <table class="rates-table">
@@ -215,7 +215,7 @@ function getAqiColor(int $aqi): string
                     </tr>
                     </tbody>
                 </table>
-            </div>--}}
+            </div>
         </div>
     </div>
 </section>

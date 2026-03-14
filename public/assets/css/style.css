@@ -2907,6 +2907,7 @@ article.hero-card.reveal.mb-3.active {
 }
 
 /* AQI Background Colors */
+/* AQI Background Gradients */
 .aqi-bg-green { background: linear-gradient(135deg, #00e400, #7dd662); }
 .aqi-bg-yellow { background: linear-gradient(135deg, #ffde33, #ffbc33); color: #333; }
 .aqi-bg-orange { background: linear-gradient(135deg, #ff9933, #ff7a33); }
@@ -2914,24 +2915,14 @@ article.hero-card.reveal.mb-3.active {
 .aqi-bg-purple { background: linear-gradient(135deg, #7e0023, #5a0019); }
 .aqi-bg-maroon { background: linear-gradient(135deg, #7e0023, #4a0012); }
 
-/* AQI Card Styling */
+/* Card Styling */
 .aqi-card-custom {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
-
-.aqi-main-info {
-    padding: 1rem;
-    color: white;
-}
-
-.aqi-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
+.aqi-main-info { padding: 1rem; color: white; }
+.aqi-header { display: flex; align-items: center; gap: 1rem; }
 .aqi-score-box {
     background: rgba(0,0,0,0.2);
     padding: 0.5rem 1rem;
@@ -2939,47 +2930,13 @@ article.hero-card.reveal.mb-3.active {
     text-align: center;
     min-width: 70px;
 }
-
-.aqi-value {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.aqi-label {
-    font-size: 0.65rem;
-    opacity: 0.9;
-    text-transform: uppercase;
-}
-
-.aqi-status .status-text {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.aqi-status .status-desc {
-    font-size: 0.8rem;
-    opacity: 0.9;
-}
-
-.aqi-face img {
-    width: 56px;
-    height: 56px;
-    margin-left: auto;
-}
-
-.aqi-separator {
-    height: 1px;
-    background: rgba(0,0,0,0.2);
-    margin: 0.75rem 0;
-}
-
-.aqi-details {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-}
-
+.aqi-value { font-size: 1.5rem; font-weight: 700; line-height: 1; }
+.aqi-label { font-size: 0.65rem; opacity: 0.9; text-transform: uppercase; }
+.aqi-status .status-text { font-size: 1.1rem; font-weight: 600; }
+.aqi-status .status-desc { font-size: 0.8rem; opacity: 0.9; }
+.aqi-face img { width: 56px; height: 56px; margin-left: auto; }
+.aqi-separator { height: 1px; background: rgba(0,0,0,0.2); margin: 0.75rem 0; }
+.aqi-details { display: flex; justify-content: space-between; font-size: 0.9rem; }
 .p-label { opacity: 0.9; }
 .p-value { font-weight: 600; margin-left: 0.25rem; }
 .p-concentration { font-weight: 600; }
@@ -2993,14 +2950,5 @@ article.hero-card.reveal.mb-3.active {
     color: #333;
     font-size: 0.85rem;
 }
-
-.w-item {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-}
-
-.w-item img, .w-item svg {
-    width: 20px;
-    height: 20px;
-}
+.w-item { display: flex; align-items: center; gap: 0.35rem; }
+.w-item img, .w-item svg { width: 20px; height: 20px; }
