@@ -1,13 +1,8 @@
 <x-layout :post="$post">
     <x-header-menus :menuCategories="$menuCategories" />
+
     {{-- Top Banner Ad --}}
-    {{--<div class="container">
-        <div class="ad-space ad-top">
-            <a href="https://your-ad-link.com" target="_blank">
-                <img src="{{asset('assets/images/ads/ad-banner.jpg')}}" alt="Advertisement">
-            </a>
-        </div>
-    </div>--}}
+    <livewire:advertisements title="Banner Header" position="main"/>
 
 <!-- Article Header -->
 <header class="article-header">
