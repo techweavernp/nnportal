@@ -748,7 +748,7 @@ article.hero-card.reveal.mb-3.active {
     border-bottom: 1px solid #f5f5f5;
     color: var(--medium-gray);
     vertical-align: middle;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 /* Prevent prices from wrapping awkwardly on mobile */

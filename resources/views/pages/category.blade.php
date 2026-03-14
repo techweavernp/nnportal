@@ -117,6 +117,9 @@
                     <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-09.46.17.jpeg"
                          alt="images" />
                 </div>--}}
+
+                <!-- Kalimati Market Price -->
+                <x-kalimati-market-price />
             </aside>
         </div>
     </div>
