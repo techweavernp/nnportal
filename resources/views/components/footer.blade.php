@@ -10,7 +10,7 @@
                     हामी तपाईंलाई सत्य तथ्य समाचार प्रदान गर्छौं।
                 </p>
                 <br>
-                <p class="footer-desc">चिकमुगल - २३, काठमाडौँ<br>TheNNPofficial@gmail.com</p>
+                <p class="footer-desc">चिकंमुगल - २३, काठमाडौँ<br>TheNNPofficial@gmail.com</p>
                 <div class="footer-social">
                     <a href="https://www.facebook.com/TheNNPofficial" target="_blank" class="social-link" aria-label="Facebook">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
