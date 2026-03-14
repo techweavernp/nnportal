@@ -197,8 +197,8 @@
         </div>
     </section>
 
-    <!-- Floating 3D Ad -->
-    <div class="floating-ad-container" id="floatingAd">
+    {{-- Floating 3D Ad --}}
+    {{--<div class="floating-ad-container" id="floatingAd">
         <div class="ad-close-btn" id="closeFloatingAd">&times;</div>
         <div class="cube-container">
             <div class="cube-face face-front">
@@ -219,6 +219,6 @@
             </div>
         </div>
         <div class="cube-shadow"></div>
-    </div>
+    </div>--}}
 
 </x-layout>
