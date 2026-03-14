@@ -18,8 +18,9 @@ class PostInfolist
                 ->columnSpanFull()
                 ->schema([
                     TextEntry::make('canonical_url')
-                        ->copyable()
-                        ->placeholder(fn ($record): string => 'https://nepalnewsportal.com/post/'.$record->slug),
+                        ->default(fn ($record): string => 'https://nepalnewsportal.com/post/'.$record->slug)
+                        ->url(fn ($record): string => 'https://nepalnewsportal.com/post/'.$record->slug)
+                        ->openUrlInNewTab('_blank'),
                     ImageEntry::make('featured_image')
                         ->placeholder('-'),
                     TextEntry::make('title'),
