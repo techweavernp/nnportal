@@ -14,7 +14,6 @@ class KalimatiMarketService
      */
     public function getPrices()
     {
-        Cache::flush();
         // Cache for 6 hours since prices don't change frequently
         return Cache::remember('kalimati_prices', 21600, function () {
             try {

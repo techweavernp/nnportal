@@ -170,7 +170,7 @@
                     <livewire:advertisements title="Sidebar AL" position="sidebar" />
 
                     <!-- Kalimati Market Price -->
-                    <x-kalimati-market-price />
+                    {{--<x-kalimati-market-price />--}}
 
                 </div>
             </div>
