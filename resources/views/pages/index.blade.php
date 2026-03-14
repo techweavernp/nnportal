@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <!-- Inline Ad -->
+    {{-- Inline Ad --}}
     {{--<livewire:advertisements title="Banner Inline" position="main"/>--}}
 
     <!-- Main 3-Column Section: भर्खरै... | मुख्य समाचार | लोकप्रिय... -->
@@ -158,7 +158,7 @@
 
                     <livewire:lokapriya />
 
-                    <!-- Sidebar Ad -->
+                    {{-- Sidebar Ad --}}
                     {{--<div class="ad-space ad-sidebar">
                         <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/01/online-300x200-1.gif"
                              alt="Advertisement">
@@ -168,15 +168,19 @@
                              alt="Advertisement">
                     </div>--}}
                     <livewire:advertisements title="Sidebar AL" position="sidebar" />
+
+                    <!-- Kalimati Market Price -->
+                    <x-kalimati-market-price />
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bottom Banner Ad -->
+    {{-- Bottom Banner Ad --}}
     <livewire:advertisements title="Banner Footer"/>
 
-    <!-- Photo Gallery Section -->
+    <!-- Highlights Section -->
     <section class="gallery-section">
         <div class="container">
             <div class="section-header reveal">

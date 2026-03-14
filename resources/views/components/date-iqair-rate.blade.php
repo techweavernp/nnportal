@@ -9,29 +9,6 @@ $calendar = $scraperDate->getTodayData();
 $aqiService = new \App\Services\IqairScraperService();
 $iqair = $aqiService->fetchData();
 
-function getAqiBgClass(int $aqi): string
-{
-    return match (true) {
-        $aqi <= 50 => 'aqi-bg-green',
-        $aqi <= 100 => 'aqi-bg-yellow',
-        $aqi <= 150 => 'aqi-bg-orange',
-        $aqi <= 200 => 'aqi-bg-red',
-        $aqi <= 300 => 'aqi-bg-purple',
-        default => 'aqi-bg-maroon',
-    };
-}
-
-function getAqiColor(int $aqi): string
-{
-    return match (true) {
-        $aqi <= 50 => 'green',
-        $aqi <= 100 => 'yellow',
-        $aqi <= 150 => 'orange',
-        $aqi <= 200 => 'red',
-        $aqi <= 300 => 'purple',
-        default => 'maroon',
-    };
-}
 ?>
 <section class="info-utilities-section reveal">
     <div class="container">
