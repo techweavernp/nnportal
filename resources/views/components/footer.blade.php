@@ -57,7 +57,8 @@
                     <a href="/category/main-news" class="footer-link">मुख्य समाचार</a>
                     <a href="/category/inter" class="footer-link">अन्तर्राष्ट्रिय</a>
                     <a href="/category/local" class="footer-link">स्थानीय</a>
-                    <a href="/category/economics" class="footer-link">अर्थतन्त्र</a>
+                    <a href="/category/economic" class="footer-link">अर्थतन्त्र</a>
+                    <a href="/category/technology" class="footer-link">टेक्नोलोजी</a>
                 </div>
             </div>
 
@@ -66,7 +67,7 @@
                 <div class="footer-links">
                     <a href="/category/entertainment" class="footer-link">मनोरन्जन</a>
                     <a href="/category/art-culture" class="footer-link">कला / संस्कृति</a>
-                    <a href="/category/health" class="footer-link">स्वास्थ्य</a>
+                    <a href="/category/sports" class="footer-link">खेलकुद</a>
                 </div>
             </div>
         </div>
