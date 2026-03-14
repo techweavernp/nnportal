@@ -693,7 +693,8 @@ article.hero-card.reveal.mb-3.active {
     background: var(--white);
     border-radius: 8px;
     max-height: 420px;
-    overflow-y: auto;
+    overflow: auto; /* Allow both horizontal and vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--border-gray);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -703,6 +704,7 @@ article.hero-card.reveal.mb-3.active {
 
 .market-table-container::-webkit-scrollbar {
     width: 6px;
+    height: 6px; /* Added height for horizontal scrollbar */
 }
 
 .market-table-container::-webkit-scrollbar-track {
@@ -722,6 +724,7 @@ article.hero-card.reveal.mb-3.active {
 
 .market-table {
     width: 100%;
+    min-width: 320px; /* Ensure table doesn't get too squashed on very small screens */
     border-collapse: collapse;
     font-size: 0.95rem;
 }
@@ -737,6 +740,7 @@ article.hero-card.reveal.mb-3.active {
     position: sticky;
     top: 0;
     z-index: 10;
+    white-space: nowrap; /* Keep header text intact */
 }
 
 .market-table td {
@@ -745,6 +749,12 @@ article.hero-card.reveal.mb-3.active {
     color: var(--medium-gray);
     vertical-align: middle;
     font-size: 0.75rem;
+}
+
+/* Prevent prices from wrapping awkwardly on mobile */
+.market-table td:nth-child(2),
+.market-table td:nth-child(3) {
+    white-space: nowrap;
 }
 
 .market-table tr:last-child td {
@@ -758,6 +768,7 @@ article.hero-card.reveal.mb-3.active {
 .product-name {
     font-weight: 600;
     color: var(--light-black);
+    min-width: 120px; /* Give product name enough space */
 }
 
 .price-avg {
@@ -769,9 +780,14 @@ article.hero-card.reveal.mb-3.active {
     .market-table {
         font-size: 0.85rem;
     }
+
     .market-table th,
     .market-table td {
         padding: 10px 8px;
+    }
+
+    .product-name {
+        min-width: 100px;
     }
 }
 
