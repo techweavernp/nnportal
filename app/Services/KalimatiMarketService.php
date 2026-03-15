@@ -27,7 +27,7 @@ class KalimatiMarketService
 
                 return $this->parseHtml($response->body());
             } catch (\Exception $e) {
-                \Log::error('Kalimati scraping failed: ' . $e->getMessage());
+                //\Log::error('Kalimati scraping failed: ' . $e->getMessage());
                 return $this->getFallbackData();
             }
         });
@@ -36,7 +36,7 @@ class KalimatiMarketService
     /**
      * Parse HTML and extract table data
      */
-    protected function parseHtml($html)
+    protected function parseHtml($html): array
     {
         $dom = new \DOMDocument();
         libxml_use_internal_errors(true);
@@ -107,7 +107,7 @@ class KalimatiMarketService
     /**
      * Extract numeric price from string (e.g., "रू ७०" -> 70)
      */
-    protected function extractNumber($text)
+    protected function extractNumber($text): array|string
     {
         // Remove 'रू' and convert Nepali numbers to English
         $text = preg_replace('/[रू\s]/u', '', $text);
@@ -121,7 +121,7 @@ class KalimatiMarketService
     /**
      * Extract unit from product cell
      */
-    protected function extractUnit($cell)
+    protected function extractUnit($cell): string
     {
         $span = $cell->getElementsByTagName('span')->item(0);
         if ($span) {

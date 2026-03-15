@@ -1,9 +1,7 @@
 <?php
-$service = new \App\Services\KalimatiMarketService();
-$marketData = $service->getPrices();
+$marketData = (new \App\Services\KalimatiMarketService())->getPrices();
 ?>
-
-
+<link rel="stylesheet" href="{{asset('assets/css/market-price.css')}}">
 <section class="market-section reveal">
     <div class="section-header" style="margin-bottom: -5px;">
         <h2 class="section-title">कालिमाटी तरकारी मूल्य</h2>
@@ -38,10 +36,6 @@ $marketData = $service->getPrices();
                     <td colspan="2" class="text-center">मूल्य उपलब्ध छैन</td>
                 </tr>
             @endforelse
-            {{--<tr>
-                <td class="product-name">गोलभेडा ठूलो (नेपाली)</td>
-                <td class="price-avg">रू ६५.००</td>
-            </tr>--}}
             </tbody>
         </table>
     </div>

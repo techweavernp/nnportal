@@ -5,7 +5,7 @@
     {{-- Top Banner Ad --}}
     <livewire:advertisements title="Banner Header" position="main"/>
 
-    {{--<x-date-iqair-rate />--}}
+    {{--<x-date-gold-nepse />--}}
 
     {{-- Election Result --}}
     {{-- <x-election-result :electionResults="$electionResults" /> --}}
