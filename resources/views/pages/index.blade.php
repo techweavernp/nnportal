@@ -3,14 +3,6 @@
     <x-header-menus :menuCategories="$menuCategories" />
 
     {{-- Top Banner Ad --}}
-    {{--<div class="container">
-        <div class="ad-space ad-top">
-            <!-- Replace the span with an anchor and image tag -->
-            <a href="https://your-ad-link.com" target="_blank">
-                <img src="{{asset('assets/images/ads/ad-banner.jpg')}}" alt="Advertisement">
-            </a>
-        </div>
-    </div>--}}
     <livewire:advertisements title="Banner Header" position="main"/>
 
     {{--<x-date-iqair-rate />--}}
@@ -18,7 +10,7 @@
     {{-- Election Result --}}
     {{-- <x-election-result :electionResults="$electionResults" /> --}}
 
-    <!-- Hero Section - Redesigned with Title Above Image, Centered -->
+    <!-- Hero Section - Banner news section -->
     <section class="hero-section hero-centered">
         <div class="container">
             @foreach($bannerPosts as $post)
@@ -159,10 +151,6 @@
                     <livewire:lokapriya />
 
                     {{-- Sidebar Ad --}}
-                    {{--<div class="ad-space ad-sidebar">
-                        <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/01/online-300x200-1.gif"
-                             alt="Advertisement">
-                    </div>--}}
                     <livewire:advertisements title="Sidebar AL" position="sidebar" />
 
                     <!-- Kalimati Market Price -->

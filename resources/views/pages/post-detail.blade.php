@@ -40,9 +40,9 @@
         <article>
             <!-- Featured Image -->
             @if($post->featured_image)
-            <div class="article-image reveal">
-                <img src="{{  asset('storage/' . $post->featured_image) }}" alt="nepal news portal">
-            </div>
+                <div class="article-image reveal">
+                    <img src="{{ asset('storage/' . $post->featured_image)}}" alt="nepal news portal">
+                </div>
             @endif
 
             <!-- Article Body -->
@@ -93,7 +93,7 @@
 
         <!-- Sidebar -->
         <aside class="sidebar">
-            <!-- Sidebar Ad -->
+            {{-- Sidebar Ad --}}
             {{--<div class="ad-space ad-sidebar reveal">
                 <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-09.46.17.jpeg"
                      alt="advertisement" />
@@ -109,7 +109,7 @@
                 <livewire:lokapriya />
             </section>
 
-            <!-- Another Sidebar Ad -->
+            {{-- Another Sidebar Ad --}}
             {{--<div class="ad-space ad-sidebar reveal">
                 <img src="https://www.onlinekhabar.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-09.46.17.jpeg"
                      alt="advertisement" />

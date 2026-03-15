@@ -73,7 +73,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; {{date('Y')}} NepalNewsPortal.com. सर्वाधिकार सुरक्षित।</p>
+            <p>&copy; {{ \App\Helpers\NepaliDateConvertor::toNepaliDigits(date('Y'))}} NepalNewsPortal.com. सर्वाधिकार सुरक्षित।</p>
         </div>
     </div>
 </footer>

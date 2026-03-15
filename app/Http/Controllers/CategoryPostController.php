@@ -32,7 +32,7 @@ class CategoryPostController extends Controller
         // Menu categories
         $menuCategories = CategoryService::getMenus();
 
-        $post = Post::with('author:id,name')->whereSlug($slug)->first();
+        $post = Post::with('author:id,name,nick_name')->whereSlug($slug)->first();
 
         // भर्खरे...
         $postQuery = fn (?string $categorySlug = null) => PostService::postQuery($categorySlug);
